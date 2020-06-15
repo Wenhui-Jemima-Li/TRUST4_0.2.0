@@ -5,12 +5,12 @@ task TRUST4bamhg38 {
       File bam
       String samplename
       File? barcode
-      String? barcodeRange="0 -1 +"
-      Boolean? abnormalUnmapFlag=false
-      Boolean? noExtraction=false
-      Int thread=1
-      Int stage=0
-      Int memory=4
+      String? barcodeRange
+      Boolean? abnormalUnmapFlag
+      Boolean? noExtraction
+      Int thread
+      Int stage
+      Int memory
     }
 
     String abnormalUnmapFlag_tag=if abnormalUnmapFlag then "--abnormalUnmapFlag" else ""
@@ -47,7 +47,7 @@ workflow TRUST4workflow {
       File bam
       String samplename
       File? barcode
-      String? barcodeRange="0 -1 +"
+      String? barcodeRange
       Boolean? abnormalUnmapFlag
       Boolean? noExtraction
       Int thread=1
