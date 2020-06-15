@@ -6,15 +6,15 @@ task TRUST4bamhg38 {
       String samplename
       File? barcode
       String? barcodeRange
-      Boolean? abnormalUnmapFlag
-      Boolean? noExtraction
+      Boolean abnormalUnmapFlag
+      Boolean noExtraction
       Int thread
       Int stage
       Int memory
     }
 
     String abnormalUnmapFlag_tag=if abnormalUnmapFlag then "--abnormalUnmapFlag" else ""
-    String noExtraction_tag=if noExtraction then "--noExtraction" else ""
+    String noExtraction_tag=if noExtraction then "--noExtraction" else "" 
     command {
         /home/TRUST4/run-trust4 -b ${bam} \
           -f /home/TRUST4/hg38_bcrtcr.fa --ref /home/TRUST4/human_IMGT+C.fa \
@@ -48,8 +48,8 @@ workflow TRUST4workflow {
       String samplename
       File? barcode
       String? barcodeRange
-      Boolean? abnormalUnmapFlag
-      Boolean? noExtraction
+      Boolean abnormalUnmapFlag
+      Boolean noExtraction
       Int thread=1
       Int stage=0
       Int memory=4
