@@ -1,0 +1,12 @@
+{
+  "TRUST4workflow.samplename": "String",
+  "TRUST4workflow.abnormalUnmapFlag": "Boolean",
+  "TRUST4workflow.barcode": "File? (optional)",
+  "TRUST4workflow.bam": "File",
+  "TRUST4workflow.noExtraction": "Boolean",
+  "TRUST4workflow.barcodeRange": "String? (optional)",
+  "TRUST4workflow.memory": "Int (optional, default = 4)",
+  "TRUST4workflow.thread": "Int (optional, default = 1)",
+  "TRUST4workflow.stage": "Int (optional, default = 0)"
+}
+
