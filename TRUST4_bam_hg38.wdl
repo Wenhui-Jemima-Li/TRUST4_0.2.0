@@ -47,7 +47,7 @@ workflow TRUST4workflow {
       File bam
       String samplename
       File? barcode
-      String? barcodeRange
+      String? barcodeRange="0 -1 +"
       Boolean abnormalUnmapFlag
       Boolean noExtraction
       Int thread=1
